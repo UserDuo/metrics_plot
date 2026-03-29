@@ -1,0 +1,26 @@
+models:
+  tokenizer:
+    default: "bert-base-uncased"
+    # Alternative options for research comparison
+    # options: ["roberta-base", "gpt2", "xlm-roberta-base"]
+  
+  embedding:
+    default: "sentence-transformers/all-MiniLM-L6-v2"
+    # For higher rigor, use larger models
+    # default: "intfloat/e5-large-v2"
+  
+  language_model:
+    default: "gpt2" # Using small model for demo; use "gpt2-xl" or Llama for paper
+  nli:
+    default: "cross-encoder/nli-deberta-v3-base" # Gold standard for NLI
+
+weights:
+  informatics: 0.15
+  tokenization: 0.25
+  semantics: 0.35
+  rhythm: 0.10
+  visualization: 0.15
+
+study:
+  output_dir: "results"
+  save_plots: true
